@@ -6,7 +6,7 @@ Fast Fluids is a Minecraft Fabric mod that aims to enhance the performance and f
 
 * **Bug Fixes**: Fast Fluids addresses various long-standing bugs and glitches related to fluids in the game. These fixes aim to ensure a more consistent and reliable fluid behavior.
 
-*  **Compatibility**: The mod is designed to be compatible with other Fabric mods and doesn't require any specific dependencies, making it easy to integrate into your existing Minecraft setup.
+*  **Compatibility**: The mod is designed to be compatible with other Fabric mods and doesn't require any specific dependencies aside from fabric-api, making it easy to integrate into your existing Minecraft setup.
 
 ## Installation
 To install Fast Fluids, follow these simple steps:
