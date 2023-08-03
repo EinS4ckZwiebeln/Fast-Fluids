@@ -14,14 +14,15 @@ public abstract class LavaFluidMixin extends FlowableFluid {
 
     // Optimize if block pos is viable for burning
     private boolean hasBurnableBlock(Chunk chunk, BlockPos pos) {
-        BlockState blockState = ((IWorld) chunk).getBlockStateIfLoaded(pos);
+        BlockState blockState = chunk.getBlockState(pos);
         if (blockState == null) return false;
         return blockState.isBurnable();
     }
 
     // Optimize search for burnable block neighbours
     private boolean canLightFire(WorldView world, BlockPos pos) {
-        Chunk chunk = world.getChunk(pos);
+        Chunk chunk = ((IWorld) world).getChunkIfLoaded(pos);
+        if (chunk == null) return false;
         // Cache original block pos
         int posX = pos.getX();
         int posY = pos.getY();
